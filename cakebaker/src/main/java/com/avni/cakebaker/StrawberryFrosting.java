@@ -1,13 +1,13 @@
 package com.avni.cakebaker;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-@Component
+//@Component
+@Qualifier("StrawberryFrost")
+
 public class StrawberryFrosting implements Frosting {
     @Override
-    public void getFrostingType(String message) {
-
-        System.out.println("Strawberry Frosting.."+message);
-
+    public String getFrostingType() {
+        return "Strawberry Frosting";
     }
 }
